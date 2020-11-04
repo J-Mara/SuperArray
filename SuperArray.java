@@ -55,6 +55,15 @@ public class SuperArray{
     return holder;
   }
 
+  public int indexOf(String s){
+    for(int i = 0; i < size; i++){
+      if(data[i].equals(s)){
+        return i;
+      }
+    }
+    return - 1;
+  }
+
   private void resize(){
     String[] holder = new String[data.length * 2];
     for(int i = 0; i < size; i++){
