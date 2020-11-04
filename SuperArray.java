@@ -46,6 +46,15 @@ public class SuperArray{
     return holder;
   }
 
+  public String remove(int index){
+    String holder = data[index];
+    for(int i = index; i < size; i++){
+      data[i] = data[i + 1];
+    }
+    size -= 1;
+    return holder;
+  }
+
   private void resize(){
     String[] holder = new String[data.length * 2];
     for(int i = 0; i < size; i++){
