@@ -33,6 +33,7 @@ public class SuperArray{
       data[i + 1] = data[i];
     }
     data[index] = element;
+    size += 1;
   }
 
   public String get(int index){
