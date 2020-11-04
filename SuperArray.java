@@ -38,4 +38,34 @@ public class SuperArray{
     data = holder;
   }
 
+  public boolean isEmpty(){
+    return size == 0;
+  }
+
+  public void clear(){
+    data = new String[10];
+    size = 0;
+  }
+
+  public String toString(){
+    if(size == 0){
+      return "[]";
+    }
+    String result = "[" + data[0];
+    for(int i = 1; i < size; i++){
+      result += ", " + data[i];
+    }
+    result += "]";
+    return result;
+  }
+
+  public boolean contains(String s){
+    for(int i = 0; i < size; i++){
+      if(s.equals(data[i])){
+        return true;
+      }
+    }
+    return false;
+  }
+
 }
