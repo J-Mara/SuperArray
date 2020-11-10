@@ -18,6 +18,19 @@ public class Demo{
     return result;
   }
 
+  public static SuperArray zip(SuperArray a, SuperArray b){
+    SuperArray result = new SuperArray(a.size() + b.size());
+    for (int i = 0; i < Math.max(a.size(), b.size()); i++) {
+      if(i < a.size()){
+        result.add(a.get(i));
+      }
+      if(i < b.size()){
+        result.add(b.get(i));
+      }
+    }
+    return result;
+  }
+
   public static void main(String[] args) {
     SuperArray words = new SuperArray();
     SuperArray words2 = new SuperArray();
@@ -44,5 +57,9 @@ public class Demo{
     System.out.println(words);
     System.out.println(words2);
     System.out.println(findOverlap(words, words2).toString());
+    System.out.println("zip testing");
+    System.out.println(words);
+    System.out.println(words2);
+    System.out.println(zip(words, words2).toString());
   }
 }
