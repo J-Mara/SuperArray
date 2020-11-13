@@ -47,6 +47,9 @@ public class SuperArray{
   }
 
   public String set(int index, String element){
+    if(index < 0 || index > size){
+      throw new IndexOutOfBoundsException("index " + index + " is out of bounds.");
+    }
     String holder = data[index];
     data[index] = element;
     return holder;
