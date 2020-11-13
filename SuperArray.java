@@ -8,6 +8,9 @@ public class SuperArray{
   }
 
   public SuperArray(int initialCapacity){
+    if(initialCapacity < 0){
+      throw new IllegalArgumentException("initialCapacity " + initialCapacity + " cannot be negative.");
+    }
     size = 0;
     data = new String[initialCapacity];
   }
