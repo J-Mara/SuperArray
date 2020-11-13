@@ -29,6 +29,9 @@ public class SuperArray{
   }
 
   public void add(int index, String element){
+    if(index < 0 || index > size){
+      throw new IndexOutOfBoundsException("index " + index + " is out of bounds.");
+    }
     if(data.length == size+1){
       resize();
     }
